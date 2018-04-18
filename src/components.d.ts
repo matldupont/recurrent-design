@@ -27,33 +27,35 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface RecButton {
+      'inverse': boolean;
+      'loading': boolean;
+      'primary': boolean;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLRecButtonElement extends StencilComponents.RecButton, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLRecButtonElement: {
+    prototype: HTMLRecButtonElement;
+    new (): HTMLRecButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'rec-button': HTMLRecButtonElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'rec-button': HTMLRecButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'rec-button': JSXElements.RecButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface RecButtonAttributes extends HTMLAttributes {
+      'inverse'?: boolean;
+      'loading'?: boolean;
+      'primary'?: boolean;
     }
   }
 }

@@ -1,5 +1,7 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'recurrent-design',
   outputTargets:[
     { 
       type: 'dist' 
@@ -8,7 +10,10 @@ exports.config = {
       type: 'www',
       serviceWorker: false
     }
-  ]
+  ],
+  plugins: [
+    sass()
+  ],
 };
 
 exports.devServer = {
