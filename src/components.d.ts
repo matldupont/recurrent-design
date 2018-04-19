@@ -29,8 +29,10 @@ declare global {
   namespace StencilComponents {
     interface RecBtn {
       'inverse': boolean;
+      'large': boolean;
       'loading': boolean;
       'primary': boolean;
+      'small': boolean;
     }
   }
 
@@ -54,8 +56,10 @@ declare global {
   namespace JSXElements {
     export interface RecBtnAttributes extends HTMLAttributes {
       'inverse'?: boolean;
+      'large'?: boolean;
       'loading'?: boolean;
       'primary'?: boolean;
+      'small'?: boolean;
     }
   }
 }

@@ -31,18 +31,32 @@ describe('rec-btn', () => {
       expect(element.querySelector('button.rec__btn')).toBeTruthy();
     });
 
-    it('should have the --primary if primary is true', async () => {
+    it('should have the --primary class if primary is true', async () => {
       expect(element.querySelector('button.rec__btn--primary')).toBeFalsy();
       element.primary = true;
       await window.flush();
       expect(element.querySelector('button.rec__btn--primary')).toBeTruthy();
     });
 
-    it('should have the --inverse if inverse is true', async () => {
+    it('should have the --inverse class if inverse is true', async () => {
       expect(element.querySelector('button.rec__btn--inverse')).toBeFalsy();
       element.inverse = true;
       await window.flush();
       expect(element.querySelector('button.rec__btn--inverse')).toBeTruthy();
+    });
+
+    it('should have the --small class if small is true', async () => {
+      expect(element.querySelector('button.rec__btn--small')).toBeFalsy();
+      element.small = true;
+      await window.flush();
+      expect(element.querySelector('button.rec__btn--small')).toBeTruthy();
+    });
+
+    it('should have the --large class if large is true', async () => {
+      expect(element.querySelector('button.rec__btn--large')).toBeFalsy();
+      element.large = true;
+      await window.flush();
+      expect(element.querySelector('button.rec__btn--large')).toBeTruthy();
     });
 
   });

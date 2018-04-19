@@ -24,6 +24,20 @@
     box-shadow: 0 .1rem .5rem rgba(#000, .2);
   }
 
+  &--large {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  &--small {
+    font-size: .8rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+  }
+
   &--primary {
     color: #FFF;
     border: 1px solid #275b71;
