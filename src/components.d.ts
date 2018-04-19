@@ -27,35 +27,68 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface RecButton {
+    interface RecBtn {
       'inverse': boolean;
       'loading': boolean;
       'primary': boolean;
     }
   }
 
-  interface HTMLRecButtonElement extends StencilComponents.RecButton, HTMLStencilElement {}
+  interface HTMLRecBtnElement extends StencilComponents.RecBtn, HTMLStencilElement {}
 
-  var HTMLRecButtonElement: {
-    prototype: HTMLRecButtonElement;
-    new (): HTMLRecButtonElement;
+  var HTMLRecBtnElement: {
+    prototype: HTMLRecBtnElement;
+    new (): HTMLRecBtnElement;
   };
   interface HTMLElementTagNameMap {
-    'rec-button': HTMLRecButtonElement;
+    'rec-btn': HTMLRecBtnElement;
   }
   interface ElementTagNameMap {
-    'rec-button': HTMLRecButtonElement;
+    'rec-btn': HTMLRecBtnElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'rec-button': JSXElements.RecButtonAttributes;
+      'rec-btn': JSXElements.RecBtnAttributes;
     }
   }
   namespace JSXElements {
-    export interface RecButtonAttributes extends HTMLAttributes {
+    export interface RecBtnAttributes extends HTMLAttributes {
       'inverse'?: boolean;
       'loading'?: boolean;
       'primary'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface RecH1 {
+
+    }
+  }
+
+  interface HTMLRecH1Element extends StencilComponents.RecH1, HTMLStencilElement {}
+
+  var HTMLRecH1Element: {
+    prototype: HTMLRecH1Element;
+    new (): HTMLRecH1Element;
+  };
+  interface HTMLElementTagNameMap {
+    'rec-h1': HTMLRecH1Element;
+  }
+  interface ElementTagNameMap {
+    'rec-h1': HTMLRecH1Element;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'rec-h1': JSXElements.RecH1Attributes;
+    }
+  }
+  namespace JSXElements {
+    export interface RecH1Attributes extends HTMLAttributes {
+
     }
   }
 }

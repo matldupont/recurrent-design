@@ -1,10 +1,10 @@
 import { flush, TestWindow } from '@stencil/core/testing';
-import { RecButton } from './rec-button';
+import { RecBtn } from './rec-btn';
 
 
-describe('rec-button', () => {
+describe('rec-btn', () => {
   it('should build', () => {
-    expect(new RecButton()).toBeTruthy();
+    expect(new RecBtn()).toBeTruthy();
   });
 
 
@@ -14,8 +14,8 @@ describe('rec-button', () => {
     beforeEach(async () => {
       window = new TestWindow();
 		  element = await window.load({
-        components: [RecButton],
-        html: '<rec-button>Click Me</rec-button>',
+        components: [RecBtn],
+        html: '<rec-btn>Click Me</rec-btn>',
       });
     });
 
@@ -27,18 +27,22 @@ describe('rec-button', () => {
       expect(element.textContent.trim()).toEqual('Click Me');
     });
 
+    it('should have the default rec__btn class', () => {
+      expect(element.querySelector('button.rec__btn')).toBeTruthy();
+    });
+
     it('should have the --primary if primary is true', async () => {
-      expect(element.querySelector('button.rec__button--primary')).toBeFalsy();
+      expect(element.querySelector('button.rec__btn--primary')).toBeFalsy();
       element.primary = true;
       await window.flush();
-      expect(element.querySelector('button.rec__button--primary')).toBeTruthy();
+      expect(element.querySelector('button.rec__btn--primary')).toBeTruthy();
     });
 
     it('should have the --inverse if inverse is true', async () => {
-      expect(element.querySelector('button.rec__button--inverse')).toBeFalsy();
+      expect(element.querySelector('button.rec__btn--inverse')).toBeFalsy();
       element.inverse = true;
       await window.flush();
-      expect(element.querySelector('button.rec__button--inverse')).toBeTruthy();
+      expect(element.querySelector('button.rec__btn--inverse')).toBeTruthy();
     });
 
   });
