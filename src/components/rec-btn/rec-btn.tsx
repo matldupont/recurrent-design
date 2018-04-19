@@ -2,7 +2,7 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'rec-btn',
-  styleUrl: '../../scss/rec-btn.scss',
+  styleUrl: '../../scss/components/_rec-btn.scss',
   shadow: true
 })
 export class RecBtn {

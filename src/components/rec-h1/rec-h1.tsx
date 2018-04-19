@@ -2,7 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'rec-h1',
-  styleUrl: '../../scss/rec-h1.scss',
+  styleUrl: '../../scss/components/_rec-h1.scss',
   shadow: true
 })
 export class RecH1 {

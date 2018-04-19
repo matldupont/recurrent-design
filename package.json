@@ -10,10 +10,13 @@
   ],
   "browser": "dist/recurrent-design.js",
   "scripts": {
-    "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "build": "npm run test && npm run build:js && npm run build:sass",
+    "build:js": "stencil build",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" \"node-sass ./src/scss/main.scss ./www/css/styles.css -w\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
+    "build:sass": "node-sass ./src/scss/main.scss ./www/css/styles.css",
+    "watch:sass": "node-sass ./src/scss/main.scss ./www/css/styles.css -w",
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache"
   },
@@ -25,7 +28,8 @@
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "node-sass": "^4.8.3"
   },
   "repository": {
     "type": "git",
