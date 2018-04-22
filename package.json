@@ -18,7 +18,9 @@
     "build:sass": "node-sass ./src/scss/main.scss ./www/css/styles.css",
     "watch:sass": "node-sass ./src/scss/main.scss ./www/css/styles.css -w",
     "test": "jest --no-cache",
-    "test.watch": "jest --watch --no-cache"
+    "test.watch": "jest --watch --no-cache",
+    "clean": "rimraf dist",
+    "deploy": "npm run clean && npm run build && s3-website deploy www"
   },
   "dependencies": {
     "@stencil/sass": "0.0.3"

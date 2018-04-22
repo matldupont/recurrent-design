@@ -1,0 +1,13 @@
+{
+   "index": "index.html",
+   "region": "ca-central-1",
+   "uploadDir": "www",
+   "prefix": "",
+   "exclude": [],
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "domain": "ux.recurrence.ca",
+   "configFile": ".s3-website.json",
+   "cert": "-a"
+}
