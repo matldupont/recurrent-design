@@ -4,6 +4,8 @@
 
 This is a Presentational Web Component library using Stencil.  Forever In Progress.  Forever Improving.
 
+[Recurrent Design](http://ux.recurrence.ca/)
+
 # Stencil - Straight from stencil-component-start
 
 Stencil is a compiler for building fast web apps using Web Components.
