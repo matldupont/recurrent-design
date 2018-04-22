@@ -4,7 +4,7 @@
 
 This is a Presentational Web Component library using Stencil.  Forever In Progress.  Forever Improving.
 
-[Recurrent Design](http://ux.recurrence.ca/)
+See it in action @ [Recurrent Design](http://ux.recurrence.ca/)
 
 # Stencil - Straight from stencil-component-start
 
