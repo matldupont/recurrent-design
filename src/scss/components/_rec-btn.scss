@@ -6,22 +6,25 @@
   padding: 3px 35px;
   box-shadow: 0 .5rem 1rem rgba(#000, .2);
   transition: all .2s;
+  color: $color-black;
+  border: 1px solid $color-grey-light;
+  background-color: $color-white;
 
   &:disabled,
   &[disabled]{
-    border: 1px solid #eaeaea;
-    background-color: #eaeaea; 
-    color: #c3c3c3;
+    border: 1px solid $color-white-2;
+    background-color: $color-white-2; 
+    color: $color-grey-light;
   }
 
   &:hover {
     transform: translateY(1px);
-    box-shadow: 0 .3rem 1rem rgba(#000, .2);
+    box-shadow: 0 .3rem 1rem rgba($color-black, .2);
   }
 
   &:active {
     transform: translateY(3px);
-    box-shadow: 0 .1rem .5rem rgba(#000, .2);
+    box-shadow: 0 .1rem .5rem rgba($color-black, .2);
   }
 
   &--large {
@@ -39,14 +42,14 @@
   }
 
   &--primary {
-    color: #FFF;
-    border: 1px solid #275b71;
-    background: #275b71;
+    color: $color-white;
+    border: 1px solid $color-primary;
+    background: $color-primary;
   }
 
   &--primary#{&}--inverse {
-    color: #275b71;
-    border: 1px solid #275b71;
-    background: #FFF;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    background: $color-white;
   }
  }

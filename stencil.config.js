@@ -12,7 +12,12 @@ exports.config = {
     }
   ],
   plugins: [
-    sass()
+    sass({
+      injectGlobalPaths: [
+        'src/scss/abstracts/variables.scss',
+        'src/scss/abstracts/mixins.scss'
+      ]
+    })
   ],
 };
 
